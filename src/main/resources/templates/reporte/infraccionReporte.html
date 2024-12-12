@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Categorias</title>
+</head>
+<body>
+  <h1>Reporte de Categorias</h1>
+  <p>Fecha: [[${fecha}]]</p>
+  <h3>Listado de Categorias</h3>
+  <table border="1" cellpadding="5" width="100%">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Placa</th>
+        <th>Infracción</th>
+        <th>Descripción</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="reg: ${registros}">
+        <td th:text="${reg.id}"></td>
+        <td th:text="${reg.placa}"></td>
+        <td th:text="${reg.infraccion}"></td>
+        <td th:text="${reg.descripcion}"></td>
+        <td th:text="${reg.fecha}"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
